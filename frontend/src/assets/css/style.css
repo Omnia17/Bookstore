@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+
+@font-face {
+  font-family: 'Enchanted'; /* Give your font a name */
+  src: url('../fonts/Enchanted.otf') ;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Enchanttales'; /* Give your font a name */
+  src: url('../fonts/EnchantedTales.otf') ;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'starlight'; /* Give your font a name */
+  src: url('../fonts/StarlightRune.ttf') ;
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+    margin: 0;
+    /* font-family: 'Arial', sans-serif; */
+    font-family: 'starlight', cursive; /* Use the Enchant font */
+   
+    background: url('../images/cozy3.jpg') no-repeat center center fixed;
+
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .login-card {
+    background: rgba(47, 63, 42, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .login-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f0e29b;
+  }
+  
+  .login-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'starlight', sans-serif; /* Apply font to inputs */
+
+    transition: all 0.3s ease; /* Smooth transition */
+
+  }
+  .login-input:hover,
+
+.login-input:focus {
+  border-color: #5aaf60; /* Highlight input on hover/focus */
+  box-shadow: 0 0 10px rgba(90, 175, 96, 0.5); /* Focus effect */
+}
+
+  .login-btn {
+    font-family: 'starlight';
+    width: 100%;
+    padding: 12px;
+    background-color: #5aaf60;
+    color: #f0e29b;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+
+  }
+  
+  .login-btn:hover {
+    background-color: #4b9e50;
+    transform: scale(1.05); /* Slightly increase size on hover */
+  }
+  
+  .login-footer {
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .login-footer a {
+    color: #5aaf60;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition */
+
+  }
+  
+  .login-footer a:hover {
+    color: #4b9e50;
+
+    text-decoration: underline;
+  }
+  

@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 console.log('MONGO_URI:', process.env.MONGO_URI);  // Should log your MongoDB URI
 
-app.use(cors()); // Enable CORS for all routes
+//app.use(cors()); // Enable CORS for all routes
 
 app.use(express.json());
 app.use(
@@ -33,33 +33,33 @@ app.get('/', (req, res) => {
 });
 
 // Define a simple schema and model for testing
-const TestSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-});
+// const TestSchema = new mongoose.Schema({
+//   name: {
+//     type: String,
+//     required: true,
+//   },
+// });
 
-const Test = mongoose.model('Test', TestSchema);
+// const Test = mongoose.model('Test', TestSchema);
 
-// Create a route that inserts a test document
-app.get('/create', async (req, res) => {
-  try {
-    // Create a new instance of the Test model
-    const testDoc = new Test({
-      name: 'Test Document',  // You can change this value to whatever you like
-    });
+// // Create a route that inserts a test document
+// app.get('/create', async (req, res) => {
+//   try {
+//     // Create a new instance of the Test model
+//     const testDoc = new Test({
+//       name: 'Test Document',  // You can change this value to whatever you like
+//     });
 
-    // Save the document to MongoDB
-    await testDoc.save();
+//     // Save the document to MongoDB
+//     await testDoc.save();
 
-    // Respond with a success message
-    res.send('Test document inserted!');
-  } catch (err) {
-    // If there's an error, respond with the error message
-    res.status(500).send('Error inserting document: ' + err.message);
-  }
-});
+//     // Respond with a success message
+//     res.send('Test document inserted!');
+//   } catch (err) {
+//     // If there's an error, respond with the error message
+//     res.status(500).send('Error inserting document: ' + err.message);
+//   }
+// });
 
 app.use('/api/auth', authRoutes);
 app.use('/api/protected', protectedRoutes);

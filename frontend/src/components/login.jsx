@@ -12,7 +12,8 @@ const Login = () => {
   const navigate = useNavigate(); // Create a navigate function
   const { loading, error } = useSelector((state) => state.auth); // Access auth state
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault(); // Prevent page reload
     setErrorMessage(''); // Clear any previous error message
     dispatch(login(email, password)) // Dispatch the login action
       .then(() => {
@@ -28,7 +29,7 @@ const Login = () => {
   };
 
   return (
-    <div style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
+    <div  style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
       <ParticlesBackground /> {/* Add the particle animation */}
     <div className="login-container" style={{ position: "relative", zIndex: 1 }}>
     <div className="login-card">
@@ -52,7 +53,7 @@ const Login = () => {
         />
         <button type="submit" className="login-btn">Login</button>
       </form>
-      <p className="login-footer">Don't have an account? <a href="/signup">Sign Up</a></p>
+      <p className="login-footer">Don't have an account? <a href="/register">Sign Up</a></p>
     </div>
   </div>
   </div>
